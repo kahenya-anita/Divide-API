@@ -128,3 +128,38 @@ INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 129-199-516
 INFO:root:Payload: {'a': 10, 'b': 2}
+INFO:root:Payload: {'a': 10, 'b': 2}
+INFO:root:Payload: {'a': 10, 'b': 2}
+INFO:root:Payload: {'a': 10, 'b': 2}
+INFO:root:Payload: {'a': 10, 'b': 2}
+INFO:root:Payload: {'a': 10, 'b': 2}
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5500
+ * Running on http://192.168.100.18:5500
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-759-957
+INFO:werkzeug:127.0.0.1 - - [02/Jul/2024 18:37:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Jul/2024 18:37:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/Jul/2024 18:37:15] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Jul/2024 18:37:19] "[33mGET /home HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/Jul/2024 18:39:15] "[33mGET /home HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/Jul/2024 18:39:16] "[33mGET /home HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/Jul/2024 18:39:16] "[33mGET /home HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/Jul/2024 18:39:20] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Jul/2024 18:39:31] "[33mGET /0 HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5500
+ * Running on http://192.168.100.18:5500
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-759-957
+INFO:werkzeug:127.0.0.1 - - [02/Jul/2024 18:42:36] "[31m[1mPOST /api/divide HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [02/Jul/2024 18:42:37] "[31m[1mPOST /api/divide HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [02/Jul/2024 18:48:03] "[35m[1mPOST /api/divide HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [02/Jul/2024 18:48:56] "[31m[1mPOST /api/divide HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [02/Jul/2024 18:50:06] "GET / HTTP/1.1" 200 -

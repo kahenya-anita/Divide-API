@@ -4,7 +4,7 @@ import unittest
 class DivideTestCase(unittest.TestCase):
     def setUp(self):
         app.config['TESTING'] = True
-        app.config['SQLALCHEMY_DATABSE_URI'] = 'sqlite:///test.db'
+        app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
         self.app = app.test_client()
         self.app_context = app.app_context()
         self.app_context.push()
