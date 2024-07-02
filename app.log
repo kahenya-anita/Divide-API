@@ -1,0 +1,29 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-759-957
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-759-957
+INFO:werkzeug:127.0.0.1 - - [02/Jul/2024 10:57:34] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/Jul/2024 10:57:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/Jul/2024 12:59:11] "[33mPOST / HTTP/1.1[0m" 404 -
+INFO:root:Payload: {'a': '10', 'b': '2', 'result': '5'}
+INFO:werkzeug:127.0.0.1 - - [02/Jul/2024 12:59:25] "POST /api/divide HTTP/1.1" 200 -
+INFO:root:Payload: {'a': '10', 'b': '2'}
+INFO:werkzeug:127.0.0.1 - - [02/Jul/2024 12:59:45] "POST /api/divide HTTP/1.1" 200 -
+INFO:root:Payload: {'a': '10', 'b': '2'}
+INFO:werkzeug:127.0.0.1 - - [02/Jul/2024 12:59:47] "POST /api/divide HTTP/1.1" 200 -
+INFO:root:Payload: {'a': '10', 'b': '2'}
+INFO:werkzeug:127.0.0.1 - - [02/Jul/2024 12:59:49] "POST /api/divide HTTP/1.1" 200 -
+INFO:root:Payload: {'a': '10', 'b': '2'}
+INFO:werkzeug:127.0.0.1 - - [02/Jul/2024 12:59:50] "POST /api/divide HTTP/1.1" 200 -
+INFO:root:Payload: {'a': '20', 'b': '2'}
+INFO:werkzeug:127.0.0.1 - - [02/Jul/2024 12:59:58] "POST /api/divide HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Jul/2024 13:00:07] "[31m[1mGET /api/divide HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [02/Jul/2024 13:00:09] "[31m[1mGET /api/divide HTTP/1.1[0m" 405 -
