@@ -4,6 +4,9 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.exc import SQLAlchemyError
 from flask_migrate import Migrate
 import sentry_sdk
+from flask_swagger_ui import get_swaggerui_blueprint
+
+
 import logging
 
 app = Flask(__name__)
@@ -15,12 +18,7 @@ migrate = Migrate(app, db)
 
 sentry_sdk.init(
     dsn=os.getenv('SENTRY_DSN'),
-    # Set traces_sample_rate to 1.0 to capture 100%
-    # of transactions for performance monitoring.
     traces_sample_rate=1.0,
-    # Set profiles_sample_rate to 1.0 to profile 100%
-    # of sampled transactions.
-    # We recommend adjusting this value in production.
     profiles_sample_rate=1.0,
 )
 
@@ -35,6 +33,7 @@ class Divide(db.Model):
     def __repr__(self):
         return f'<Divide {self.a}, {self.b}, {self.result}>'
 
+
 @app.route('/')
 def index():
     return 'Hello world'
@@ -42,6 +41,52 @@ def index():
 
 @app.route('/api/divide', methods=['POST'])
 def divide():
+    """
+    Divide two integers
+    ---
+    tags:
+      - Division
+    parameters:
+      - name: a
+        in: body
+        description: The first integer
+        required: true
+        schema:
+          type: integer
+          example: 10
+      - name: b
+        in: body
+        description: The second integer
+        required: true
+        schema:
+          type: integer
+          example: 2
+    responses:
+      200:
+        description: The result of the division
+        schema:
+          type: object
+          properties:
+            result:
+              type: integer
+              example: 5
+      400:
+        description: Invalid input
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
+              example: You cannot divide by 0
+      500:
+        description: Internal server error
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
+              example: Database error
+    """
     try:
         data = request.get_json()
         a = int(data.get('a'))
@@ -66,6 +111,13 @@ def divide():
         db.session.rollback()
         return jsonify({"error": str(e)}), 500
 
+SWAGGER_URL = '/swagger'
+API_URL = '/static/swagger.yaml'
+swaggerui_blueprint = get_swaggerui_blueprint(SWAGGER_URL, API_URL, config={'app_name': "Division API"})
+
+app.register_blueprint(swaggerui_blueprint, url_prefix=SWAGGER_URL)
 
 if __name__ == "__main__":
+    with app.app_context():
+        db.create_all()
     app.run(debug=True, host='0.0.0.0', port=5500)

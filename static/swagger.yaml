@@ -1,0 +1,59 @@
+swagger: '2.0'
+info:
+  version: "1.0.0"
+  title: "Division API"
+  description: "API for dividing two integers"
+host: "localhost:5500"
+schemes:
+  - "http"
+paths:
+  /api/divide:
+    post:
+      tags:
+        - "Division"
+      summary: "Divide two integers"
+      description: ""
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "Input integers"
+          required: true
+          schema:
+            type: "object"
+            properties:
+              a:
+                type: "integer"
+              b:
+                type: "integer"
+            example:
+              a: 10
+              b: 2
+      responses:
+        200:
+          description: "The result of the division"
+          schema:
+            type: "object"
+            properties:
+              result:
+                type: "integer"
+                example: 5
+        400:
+          description: "Invalid input"
+          schema:
+            type: "object"
+            properties:
+              error:
+                type: "string"
+                example: "You cannot divide by 0"
+        500:
+          description: "Internal server error"
+          schema:
+            type: "object"
+            properties:
+              error:
+                type: "string"
+                example: "Database error"
