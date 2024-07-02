@@ -1,10 +1,16 @@
 version: '3.12'
 services:
- web:
+  web:
     build: .
     ports:
-      - "5000: 5000"
+      - "5500:5500"
     volumes:
       - .:/app
     environment:
-      - FLASK_ENV=development
+      - FLASK_ENV=Division
+
+  tests:
+    build: .
+    command: ["python3", "-m", "unittest", "discover", "-s", "tests"]
+    volumes:
+      - .:/app

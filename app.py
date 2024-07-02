@@ -22,6 +22,10 @@ class Divide(db.Model):
     def __repr__(self):
         return f'<Divide {self.a}, {self.b}, {self.result}>'
 
+@app.route('/')
+def index():
+    return 'Hello world'
+
 @app.route('/api/divide', methods=['POST'])
 def divide():
     try:
@@ -49,4 +53,4 @@ def divide():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=5500)

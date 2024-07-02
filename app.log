@@ -27,3 +27,104 @@ INFO:root:Payload: {'a': '20', 'b': '2'}
 INFO:werkzeug:127.0.0.1 - - [02/Jul/2024 12:59:58] "POST /api/divide HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [02/Jul/2024 13:00:07] "[31m[1mGET /api/divide HTTP/1.1[0m" 405 -
 INFO:werkzeug:127.0.0.1 - - [02/Jul/2024 13:00:09] "[31m[1mGET /api/divide HTTP/1.1[0m" 405 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 129-199-516
+INFO:werkzeug: * Detected change in '/app/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 129-199-516
+INFO:werkzeug: * Detected change in '/app/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 129-199-516
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-759-957
+INFO:root:Payload: {'a': '25', 'b': '2'}
+INFO:werkzeug:127.0.0.1 - - [02/Jul/2024 15:29:23] "POST /api/divide HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Jul/2024 15:29:42] "GET / HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/anitakahenya/Documents/Division/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in '/app/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 129-199-516
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5500
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-759-957
+INFO:root:Payload: {'a': '25', 'b': '2'}
+INFO:werkzeug:127.0.0.1 - - [02/Jul/2024 15:31:21] "POST /api/divide HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5500
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-759-957
+INFO:werkzeug:127.0.0.1 - - [02/Jul/2024 15:32:20] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Jul/2024 15:32:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/Jul/2024 15:32:21] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5500
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 129-199-516
+INFO:werkzeug:127.0.0.1 - - [02/Jul/2024 15:34:55] "GET / HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/app/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 129-199-516
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5500
+ * Running on http://172.18.0.2:5500
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 129-199-516
+INFO:root:Payload: {'a': '25', 'b': '2'}
+INFO:werkzeug:192.168.65.1 - - [02/Jul/2024 12:46:01] "POST /api/divide HTTP/1.1" 200 -
+INFO:werkzeug:192.168.65.1 - - [02/Jul/2024 12:46:20] "GET / HTTP/1.1" 200 -
+INFO:root:Payload: {'a': '25', 'b': '2'}
+INFO:werkzeug:192.168.65.1 - - [02/Jul/2024 12:46:26] "POST /api/divide HTTP/1.1" 200 -
+INFO:werkzeug:192.168.65.1 - - [02/Jul/2024 12:46:44] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.65.1 - - [02/Jul/2024 13:07:28] "[31m[1mPOST /api/divide HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Detected change in '/app/test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 129-199-516
+INFO:werkzeug: * Detected change in '/app/test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 129-199-516
+INFO:werkzeug: * Detected change in '/app/test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 129-199-516
+INFO:werkzeug: * Detected change in '/app/test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 129-199-516
+INFO:werkzeug: * Detected change in '/app/test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 129-199-516
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5500
+ * Running on http://172.18.0.2:5500
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 129-199-516
+INFO:root:Payload: {'a': 10, 'b': 2}
