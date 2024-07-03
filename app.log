@@ -276,3 +276,4 @@ INFO:root:Payload: {'a': 10, 'b': 2}
 ERROR:flask_migrate:Error: Directory migrations already exists and is not empty
 INFO:root:Payload: {'a': 10, 'b': 2}
 INFO:root:Payload: {'a': 10, 'b': 2}
+INFO:root:Payload: {'a': 10, 'b': 2}
