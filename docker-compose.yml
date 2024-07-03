@@ -1,13 +1,17 @@
-version: '3.12'
+version: '3.11'
 services:
   web:
     build: .
+    command: >
+      sh -c "flask db upgrade &&
+             gunicorn --bind 0.0.0.0:5500 app:app"
     ports:
       - "5500:5500"
     volumes:
       - .:/app
     environment:
       - FLASK_ENV=Division
+      - FLASK_APP=app.py
 
   tests:
     build: .

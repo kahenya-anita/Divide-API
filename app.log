@@ -269,3 +269,10 @@ WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 132-575-886
 INFO:root:Payload: {'a': '25', 'b': '5'}
 INFO:werkzeug:192.168.65.1 - - [02/Jul/2024 17:35:08] "POST /api/divide HTTP/1.1" 200 -
+INFO:root:Payload: {'a': 10, 'b': 2}
+INFO:root:Payload: {'a': 10, 'b': 2}
+INFO:root:Payload: {'a': 10, 'b': 2}
+INFO:root:Payload: {'a': 10, 'b': 2}
+ERROR:flask_migrate:Error: Directory migrations already exists and is not empty
+INFO:root:Payload: {'a': 10, 'b': 2}
+INFO:root:Payload: {'a': 10, 'b': 2}

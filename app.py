@@ -1,4 +1,7 @@
 import os
+from dotenv import load_dotenv
+load_dotenv()
+
 from flask import Flask, jsonify, request
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.exc import SQLAlchemyError
@@ -12,6 +15,11 @@ import logging
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///app.sqlite"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+app.config["SWAGGER"] = {
+    "title": "Division API",
+    'uiversion': 3
+}
+
 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
