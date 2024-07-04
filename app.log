@@ -277,3 +277,33 @@ ERROR:flask_migrate:Error: Directory migrations already exists and is not empty
 INFO:root:Payload: {'a': 10, 'b': 2}
 INFO:root:Payload: {'a': 10, 'b': 2}
 INFO:root:Payload: {'a': 10, 'b': 2}
+INFO:root:Payload: {'a': 10, 'b': 2}
+INFO:root:Payload: {'a': 10, 'b': 2}
+INFO:root:Payload: {'a': 10, 'b': 2}
+INFO:root:Payload: {'a': '25', 'b': '5'}
+ERROR:app:Exception on /api/divide [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app.py", line 101, in divide
+    b = int(data.get('b'))
+        ^^^^^^^^^^^^^^^^^^
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+INFO:root:Payload: {'a': '25', 'b': '5'}
+INFO:root:Payload: {'a': 10, 'b': 2}
+INFO:root:Payload: {'a': 10, 'b': 2}
+INFO:root:Payload: {'a': '25', 'b': '5'}
+INFO:root:Payload: {'a': '20', 'b': '5'}
+INFO:root:Payload: {'a': '20', 'b': '5'}
+INFO:root:Payload: {'a': '20', 'b': '5'}
+INFO:root:Payload: {'a': '20', 'b': '5'}
