@@ -12,6 +12,7 @@ This project includes basic logging, error handling, observability features and 
   - [Author : Anita Kahenya Jul 2024](#author--anita-kahenya-jul-2024)
 - [Table of Contents](#table-of-contents)
 - [Features](#features)
+- [Live Preview](#live-preview)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [API Documentation](#api-documentation)
@@ -30,6 +31,10 @@ This project includes basic logging, error handling, observability features and 
 - Containerized using Docker and Docker Compose.
 - Documentation on Apidog
 
+## Live Preview
+
+- To view the live project [Visit](https://divide-api.onrender.com) the root of the project and [api/divide](https://divide-api.onrender.com/api/divide) to POST.
+  
 ## Requirements
 
 - Python3
@@ -63,7 +68,7 @@ This project includes basic logging, error handling, observability features and 
     http://localhost:5500
 
 6. Open postman to run your first division operation
-    ``sh 
+    ```sh 
     POST : http://localhost:5500/api/divide
     Body:
         {
@@ -79,7 +84,7 @@ This project includes basic logging, error handling, observability features and 
 ## Testing
 
 - To run the tests
-    ``sh
+    ```sh
     docker-compose run tests
 
 ## Contributing and Making Changes
