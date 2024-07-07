@@ -307,3 +307,8 @@ INFO:root:Payload: {'a': '20', 'b': '5'}
 INFO:root:Payload: {'a': '20', 'b': '5'}
 INFO:root:Payload: {'a': '20', 'b': '5'}
 INFO:root:Payload: {'a': '20', 'b': '5'}
+INFO:root:Payload: {'a': 10, 'b': 5}
+INFO:root:Payload: {'a': 10, 'b': 2}
+INFO:root:Payload: {'a': 10, 'b': 2}
+INFO:root:Payload: {'a': '10', 'b': '2'}
+INFO:root:Payload: {'a': '20', 'b': '5'}

@@ -7,6 +7,7 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.exc import SQLAlchemyError
 from flask_migrate import Migrate
 import sentry_sdk
+from sentry_sdk.integrations.flask import FlaskIntegration
 from flask_swagger_ui import get_swaggerui_blueprint
 
 
@@ -26,6 +27,7 @@ migrate = Migrate(app, db)
 
 sentry_sdk.init(
     dsn=os.getenv('SENTRY_DSN'),
+    integrations=[FlaskIntegration()],
     traces_sample_rate=1.0,
     profiles_sample_rate=1.0,
 )
