@@ -1,7 +1,13 @@
 name: CI linting
 
 # Trigger action on Git Push or Pull Request
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 permissions:
   pull-requests: write
@@ -12,23 +18,27 @@ jobs:
     name: runner / flake8
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
       - name: Install dependencies
         run: |
-          python3 -m pip install --upgrade pip
+          python -m pip install --upgrade pip
           pip install flake8 flake8-flask
           pip install importlib-metadata==4.13.0
       - name: Run flake8
+        if: github.event_name == 'pull_request'
         uses: reviewdog/action-flake8@v3
         with:
-          github_token: ${{ secrets.NEW_SECRET }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-pr-review
           fail_on_error: true
           flake8_args: "--ignore-path .gitignore"
+      - name: Run flake8 (push)
+        if: github.event_name == 'push'
+        run: flake8 --ignore-path .gitignore
 
   black:
     name: runner / black
@@ -41,12 +51,16 @@ jobs:
           python-version: '3.x'
       - name: Install dependencies
         run: |
-          python3 -m pip install --upgrade pip
+          python -m pip install --upgrade pip
           pip install black
       - name: Run black
+        if: github.event_name == 'pull_request'
         uses: reviewdog/action-black@v3
         with:
-          github_token: ${{ secrets.NEW_SECRET }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-pr-review
           fail_on_error: true
           black_args: "--check --diff"
+      - name: Run black (push)
+        if: github.event_name == 'push'
+        run: black --check --diff .
