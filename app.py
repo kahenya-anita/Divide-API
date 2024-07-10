@@ -16,10 +16,7 @@ import logging
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///app.sqlite"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-app.config["SWAGGER"] = {
-    "title": "Division API",
-    'uiversion': 3
-}
+app.config["SWAGGER"] = {"title": "Division API",'uiversion': 3}
 
 
 db = SQLAlchemy(app)
