@@ -1,17 +1,51 @@
 name: CI linting
 
-#Trigger action on Git Push or Pull Request
+# Trigger action on Git Push or Pull Request
 on: [push, pull_request]
+
 permissions:
   pull-requests: write
   contents: read
+
 jobs:
-  eslint:
-    name: runner / eslint
+  flake8:
+    name: runner / flake8
     runs-on: ubuntu-latest
     steps:
-      - uses: reviewdog/action-eslint@v1
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
+          python-version: '3.x'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install flake8 flake8-flask
+      - name: Run flake8
+        uses: reviewdog/action-flake8@v3
+        with:
+          github_token: ${{ secrets.NEW_SECRET }}
           reporter: github-pr-review
           fail_on_error: true
-          eslint_flags: --ignore-path .gitignore 
+          flake8_args: "--ignore-path .gitignore"
+
+  black:
+    name: runner / black
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install black
+      - name: Run black
+        uses: reviewdog/action-black@v3
+        with:
+          github_token: ${{ secrets.NEW_SECRET }}
+          reporter: github-pr-review
+          fail_on_error: true
+          black_args: "--check --diff"
