@@ -33,7 +33,7 @@ This project includes basic logging, error handling, observability features and 
 
 ## Live Preview
 
-- To view the live project [Visit](https://divide-api.onrender.com) the root of the project and [api/divide](https://divide-api.onrender.com/api/divide) to POST.
+- To view the live project [Visit](https://divide-api.onrender.com) the root of the project and the [api/divide](https://sp1xk1rtgc.apidog.io/endpoint-8346263) POST endpoint on Apidog.
   
 ## Requirements
 
